@@ -1,0 +1,2588 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover" />
+  <title>Happy Birthday, Neha Vaini!</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,600;1,700;1,800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --rose: #d1235c;
+      --head: #b82555;
+      --ink: #4a2a36;
+      --soft: #8a5568;
+      --gold: #d4af37;
+      --u: 1vh;
+    }
+    @supports (height: 1dvh) {
+      :root {
+        --u: 1dvh;
+      }
+    }
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      -webkit-tap-highlight-color: transparent;
+    }
+    html,
+    body {
+      height: 100%;
+      height: 100dvh;
+      overflow: hidden;
+      overscroll-behavior: none;
+      touch-action: manipulation;
+    }
+    body {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      color: var(--ink);
+      background: radial-gradient(circle at 50% 38%, #fff8f9 0%, #fbe9ee 55%, #f8d7df 100%);
+      user-select: none;
+      -webkit-user-select: none;
+    }
+    button,
+    input,
+    textarea {
+      font-family: inherit;
+      touch-action: manipulation;
+    }
+
+    #root {
+      position: fixed;
+      inset: 0;
+      width: 100%;
+      height: 100dvh;
+      overflow: hidden;
+    }
+
+    /* Ambient Pastel Orbs */
+    #orbs {
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      z-index: 0;
+    }
+    #orbs i {
+      position: absolute;
+      border-radius: 50%;
+      filter: blur(56px);
+      opacity: 0.55;
+      animation: drift 14s ease-in-out infinite alternate;
+    }
+    #orbs i:nth-child(1) {
+      width: 280px;
+      height: 280px;
+      background: #ffc2d4;
+      top: -60px;
+      left: -70px;
+    }
+    #orbs i:nth-child(2) {
+      width: 300px;
+      height: 300px;
+      background: #ffe3c9;
+      bottom: -90px;
+      right: -80px;
+      animation-delay: -5s;
+    }
+    #orbs i:nth-child(3) {
+      width: 220px;
+      height: 220px;
+      background: #e6d6ff;
+      top: 42%;
+      left: 55%;
+      animation-delay: -9s;
+    }
+    @keyframes drift {
+      to {
+        transform: translate(30px, -26px) scale(1.12);
+      }
+    }
+
+    /* Rising Ambient Sparkles & Stars */
+    #hearts {
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      overflow: hidden;
+      z-index: 1;
+    }
+    .fh {
+      position: absolute;
+      bottom: -40px;
+      opacity: 0.55;
+      animation: rise linear forwards;
+    }
+    @keyframes rise {
+      to {
+        transform: translate(var(--dx), -115vh) rotate(var(--r));
+        opacity: 0;
+      }
+    }
+
+    /* Twilight Backdrop (Stage 3 Candle Wish) */
+    #dim {
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(circle at 50% 50%, rgba(84, 28, 60, 0.72), rgba(24, 8, 34, 0.92));
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 1.4s ease;
+      z-index: 2;
+    }
+    #dim.on {
+      opacity: 1;
+    }
+
+    /* Responsive Stage Layout */
+    #stage {
+      position: absolute;
+      inset: 0;
+      z-index: 3;
+      display: flex;
+      overflow-y: auto;
+      overflow-x: hidden;
+      padding: calc(54px + env(safe-area-inset-top)) 16px calc(58px + env(safe-area-inset-bottom));
+      -webkit-overflow-scrolling: touch;
+    }
+    #stage > .in {
+      margin: auto;
+      width: 100%;
+      max-width: 420px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 13px;
+      text-align: center;
+      animation: enter 0.72s cubic-bezier(0.2, 0.8, 0.2, 1) both;
+    }
+    #stage.leave > .in {
+      animation: leave 0.3s ease both;
+    }
+    @keyframes enter {
+      from {
+        opacity: 0;
+        transform: translateY(20px) scale(0.98);
+      }
+      to {
+        opacity: 1;
+        transform: none;
+      }
+    }
+    @keyframes leave {
+      to {
+        opacity: 0;
+        transform: translateY(-14px) scale(0.98);
+      }
+    }
+    @keyframes fin {
+      from {
+        opacity: 0;
+        transform: translateY(6px);
+      }
+      to {
+        opacity: 1;
+        transform: none;
+      }
+    }
+
+    /* Typography */
+    h1,
+    h2 {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-style: italic;
+      font-weight: 700;
+      color: var(--head);
+      line-height: 1.16;
+      transition: color 0.9s;
+    }
+    h1 {
+      font-size: clamp(26px, 7.5vw, 40px);
+    }
+    h1 .nm {
+      display: block;
+      margin-top: 2px;
+      font-size: clamp(36px, 11.5vw, 60px);
+      font-weight: 800;
+      overflow-wrap: anywhere;
+      background: linear-gradient(135deg, #c81e55, #f0658f 60%, #d1235c);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      padding: 0 4px 6px;
+    }
+    h2 {
+      font-size: clamp(24px, 6.8vw, 34px);
+    }
+    .sub {
+      font-size: 14px;
+      line-height: 1.45;
+      color: var(--soft);
+      font-weight: 600;
+      transition: color 0.9s, opacity 0.6s;
+      padding: 0 6px;
+    }
+    .q {
+      font-size: clamp(16px, 4.5vw, 19px);
+      font-weight: 600;
+      color: #5c3a47;
+      line-height: 1.4;
+    }
+    .hand {
+      font-family: 'Caveat', cursive;
+    }
+    .pill {
+      background: rgba(255, 255, 255, 0.82);
+      border: 1px solid #f0cdd8;
+      color: #9e6b7a;
+      font-size: 12px;
+      font-weight: 700;
+      padding: 5px 14px;
+      border-radius: 999px;
+    }
+
+    /* Tactile Buttons */
+    .btn {
+      position: relative;
+      overflow: hidden;
+      font: 700 15px 'Plus Jakarta Sans', sans-serif;
+      background: linear-gradient(135deg, #de2b65, #c81e55);
+      color: #fff;
+      border: 0;
+      border-radius: 999px;
+      padding: 13px 32px;
+      min-height: 46px;
+      cursor: pointer;
+      box-shadow: 0 10px 24px -6px rgba(209, 35, 92, 0.5);
+      transition: transform 0.25s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.25s, opacity 0.6s;
+    }
+    .btn::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -60%;
+      width: 36%;
+      height: 100%;
+      background: linear-gradient(100deg, transparent, rgba(255, 255, 255, 0.5), transparent);
+      transform: skewX(-20deg);
+      animation: shine 3.4s infinite;
+    }
+    @keyframes shine {
+      0%,
+      60% {
+        left: -60%;
+      }
+      100% {
+        left: 130%;
+      }
+    }
+    .btn:hover {
+      transform: translateY(-2px) scale(1.03);
+    }
+    .btn:active {
+      transform: scale(0.95);
+    }
+    .btn.ghost {
+      background: #fff;
+      color: var(--rose);
+      border: 2px solid #f0b4c6;
+      box-shadow: 0 6px 16px -8px rgba(209, 35, 92, 0.35);
+    }
+    .btn.ghost::after {
+      display: none;
+    }
+    .btn.sm {
+      padding: 11px 20px;
+      min-height: 42px;
+      font-size: 14px;
+    }
+    .slot {
+      min-height: 50px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .reveal {
+      opacity: 0;
+      pointer-events: none;
+      transform: translateY(8px);
+      transition: opacity 0.6s, transform 0.6s;
+    }
+    .reveal.on {
+      opacity: 1;
+      pointer-events: auto;
+      transform: none;
+    }
+
+    /* Stage 1: Welcome (Crown & Celebration Arch) */
+    .bunting {
+      width: min(350px, 90vw);
+      height: auto;
+      display: block;
+    }
+    .scene {
+      width: min(260px, 68vw, calc(var(--u) * 26));
+      height: auto;
+      display: block;
+      overflow: visible;
+    }
+    .rowbox {
+      position: relative;
+      width: 100%;
+      height: 116px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 14px;
+    }
+    #no {
+      transition: transform 0.28s cubic-bezier(0.34, 1.4, 0.64, 1);
+      white-space: nowrap;
+    }
+    .tw {
+      animation: tw 2.4s ease-in-out infinite;
+      transform-box: fill-box;
+      transform-origin: center;
+    }
+    @keyframes tw {
+      50% {
+        opacity: 0.35;
+        transform: scale(0.7);
+      }
+    }
+
+    /* Stage 2: Balloons */
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(2, auto);
+      gap: 12px 24px;
+      justify-content: center;
+    }
+    .bal {
+      --bh: min(148px, calc(var(--u) * 20));
+      width: calc(var(--bh) * 0.8);
+      height: var(--bh);
+      position: relative;
+      display: grid;
+      place-items: center;
+      cursor: pointer;
+    }
+    .bal svg {
+      width: 100%;
+      height: 100%;
+      display: block;
+      animation: bob 3.4s ease-in-out infinite;
+      filter: drop-shadow(0 8px 10px rgba(120, 40, 70, 0.18));
+    }
+    .bal:nth-child(2) svg {
+      animation-delay: -0.8s;
+    }
+    .bal:nth-child(3) svg {
+      animation-delay: -1.6s;
+    }
+    .bal:nth-child(4) svg {
+      animation-delay: -2.4s;
+    }
+    @keyframes bob {
+      50% {
+        transform: translateY(-9px) rotate(2deg);
+      }
+    }
+    .bal .word {
+      position: absolute;
+      inset: 0;
+      display: grid;
+      place-items: center;
+      font-family: 'Caveat', cursive;
+      font-weight: 700;
+      color: var(--head);
+      line-height: 1;
+      text-align: center;
+      overflow-wrap: anywhere;
+      padding: 0 4px;
+      opacity: 0;
+      transform: scale(0.4);
+      transition: opacity 0.5s 0.12s, transform 0.6s 0.12s cubic-bezier(0.34, 1.56, 0.64, 1);
+    }
+    .bal.popped svg {
+      animation: pop 0.3s forwards;
+    }
+    .bal.popped .word {
+      opacity: 1;
+      transform: scale(1);
+    }
+    @keyframes pop {
+      40% {
+        transform: scale(1.18);
+      }
+      100% {
+        transform: scale(1.5);
+        opacity: 0;
+        visibility: hidden;
+      }
+    }
+    .spark {
+      position: absolute;
+      left: 50%;
+      top: 42%;
+      width: 9px;
+      height: 9px;
+      border-radius: 50%;
+      pointer-events: none;
+      animation: spk 0.7s forwards;
+    }
+    @keyframes spk {
+      to {
+        transform: translate(var(--x), var(--y)) scale(0);
+        opacity: 0;
+      }
+    }
+
+    /* Stage 3: Candle */
+    .cake {
+      width: min(265px, 74vw, calc(var(--u) * 36));
+      height: auto;
+      display: block;
+      cursor: pointer;
+      transition: filter 1.4s;
+      overflow: visible;
+    }
+    #stage.twilight .cake {
+      filter: brightness(0.78) saturate(0.9);
+    }
+    .hdslot {
+      display: grid;
+      width: 100%;
+      min-height: 74px;
+      font-size: clamp(24px, 6.8vw, 34px);
+    }
+    .hdslot > * {
+      grid-area: 1 / 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: opacity 0.85s ease;
+    }
+    .wishtxt {
+      font-family: 'Caveat', cursive;
+      font-weight: 700;
+      font-size: clamp(32px, 9.5vw, 46px);
+      line-height: 1.08;
+      color: #fff3cc;
+      text-shadow: 0 2px 14px rgba(255, 198, 107, 0.95), 0 0 34px rgba(255, 158, 184, 0.85);
+      opacity: 0;
+      text-align: center;
+      -webkit-font-smoothing: antialiased;
+    }
+    #stage.twilight .wishtxt {
+      opacity: 1;
+    }
+    #stage.twilight .hdslot h2 {
+      opacity: 0;
+    }
+    #stage.twilight .sub.hint {
+      opacity: 0;
+    }
+    .flame {
+      transform-box: fill-box;
+      transform-origin: 50% 100%;
+      animation: flick 0.22s ease-in-out infinite alternate;
+    }
+    @keyframes flick {
+      from {
+        transform: scale(1, 1) rotate(-3deg);
+      }
+      to {
+        transform: scale(0.9, 1.12) rotate(3deg);
+      }
+    }
+    .halo {
+      animation: halo 1.6s ease-in-out infinite alternate;
+    }
+    @keyframes halo {
+      from {
+        opacity: 0.5;
+      }
+      to {
+        opacity: 0.85;
+      }
+    }
+    .smoke {
+      opacity: 0;
+      transform-box: fill-box;
+      transform-origin: center;
+    }
+    .out .flame,
+    .out .halo {
+      display: none;
+    }
+    .out .smoke {
+      animation: smk 2.8s ease-out forwards;
+    }
+    .out .smoke:nth-of-type(2) {
+      animation-delay: 0.35s;
+    }
+    .out .smoke:nth-of-type(3) {
+      animation-delay: 0.7s;
+    }
+    @keyframes smk {
+      0% {
+        opacity: 0.75;
+        transform: translateY(0) scale(0.5);
+      }
+      100% {
+        opacity: 0;
+        transform: translateY(-80px) scale(2);
+      }
+    }
+
+    /* Stage 4: Royal Crown Constellation (Full Connected Crown!) */
+    .sky {
+      width: min(315px, 86vw, calc(var(--u) * 39 * 1.15));
+      aspect-ratio: 300 / 260;
+      border-radius: 22px;
+      overflow: hidden;
+      box-shadow: 0 18px 40px -14px rgba(40, 20, 80, 0.6);
+    }
+    .sky svg {
+      width: 100%;
+      height: 100%;
+      display: block;
+    }
+    .sky .st {
+      cursor: pointer;
+    }
+    .sky .st .core {
+      transform-box: fill-box;
+      transform-origin: center;
+      transition: all 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+    }
+    .sky .st .glow {
+      opacity: 0;
+      transition: opacity 0.6s;
+    }
+    .sky .st.lit .glow {
+      opacity: 1;
+    }
+    .sky .st:not(.lit) .core {
+      fill: #8582bd;
+      transform: scale(0.75);
+      animation: tw 2.6s ease-in-out infinite;
+    }
+    .sky .st.lit .core {
+      fill: #ffe08a;
+      transform: scale(1.38);
+    }
+    .sky .line {
+      stroke: #ffd9a0;
+      stroke-width: 2.2;
+      fill: none;
+      stroke-dasharray: 1200;
+      stroke-dashoffset: 1200;
+      stroke-linejoin: round;
+      stroke-linecap: round;
+    }
+    .sky.done .line {
+      animation: draw 2.2s ease forwards;
+    }
+    @keyframes draw {
+      to {
+        stroke-dashoffset: 0;
+      }
+    }
+    .sky .hfill {
+      fill: #ffd27a;
+      opacity: 0;
+      transition: opacity 2s 1.4s;
+    }
+    .sky.done .hfill {
+      opacity: 0.25;
+    }
+    .swap {
+      display: grid;
+      width: 100%;
+      min-height: 42px;
+    }
+    .swap > * {
+      grid-area: 1 / 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: opacity 0.6s;
+    }
+    .swap .b {
+      opacity: 0;
+    }
+    .swap.on .a {
+      opacity: 0;
+    }
+    .swap.on .b {
+      opacity: 1;
+    }
+
+    /* Stage 5: Interactive Spin-the-Wheel (Vaini's Birthday Fortune!) */
+    .wheel-wrap {
+      position: relative;
+      width: min(260px, 74vw);
+      height: min(260px, 74vw);
+      display: grid;
+      place-items: center;
+      margin: 4px 0;
+    }
+    .wheel-pointer {
+      position: absolute;
+      top: -12px;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 5;
+      width: 0;
+      height: 0;
+      border-left: 14px solid transparent;
+      border-right: 14px solid transparent;
+      border-top: 24px solid var(--rose);
+      filter: drop-shadow(0 3px 6px rgba(184, 37, 85, 0.45));
+    }
+    .wheel-svg {
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      box-shadow: 0 16px 36px -12px rgba(184, 37, 85, 0.48), 0 0 0 5px #fff, 0 0 0 8px var(--gold);
+      transition: transform 3.6s cubic-bezier(0.15, 0.85, 0.25, 1);
+      cursor: pointer;
+    }
+    .wheel-res {
+      background: rgba(255, 255, 255, 0.9);
+      border: 1.5px solid #f2b7c6;
+      border-radius: 16px;
+      padding: 12px 16px;
+      width: 100%;
+      animation: enter 0.5s both;
+      box-shadow: 0 10px 24px -12px rgba(184, 37, 85, 0.35);
+    }
+
+    /* Stage 6: Polaroid Moments */
+    .stackbox {
+      --h: min(295px, calc(var(--u) * 38));
+      position: relative;
+      height: var(--h);
+      width: min(calc(var(--h) * 0.8), 72vw);
+      touch-action: none;
+      cursor: grab;
+      margin: 6px 0;
+    }
+    .pol {
+      position: absolute;
+      inset: 0;
+      background: #fff;
+      border-radius: 6px;
+      padding: 10px 10px 0;
+      box-shadow: 0 14px 30px -10px rgba(120, 40, 70, 0.45);
+      transition: transform 0.45s cubic-bezier(0.3, 0.8, 0.3, 1), opacity 0.4s;
+      will-change: transform;
+    }
+    .pol .ph {
+      height: calc(100% - 54px);
+      border-radius: 3px;
+      overflow: hidden;
+      background: #fbe3ea;
+    }
+    .pol img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      pointer-events: none;
+      -webkit-user-drag: none;
+    }
+    .pol .cap {
+      height: 54px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Caveat', cursive;
+      font-weight: 700;
+      font-size: 24px;
+      color: var(--head);
+      padding: 0 6px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    /* Stage 7: Why You're the Best Vaini */
+    .list {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 9px;
+    }
+    .item {
+      width: 100%;
+      min-height: 58px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      text-align: left;
+      padding: 10px 14px;
+      border-radius: 16px;
+      background: rgba(255, 255, 255, 0.82);
+      border: 1.5px solid #f3c8d5;
+      color: var(--ink);
+      cursor: pointer;
+      font: 600 14px/1.4 'Plus Jakarta Sans', sans-serif;
+      box-shadow: 0 10px 24px -14px rgba(184, 37, 85, 0.5);
+      transition: transform 0.25s, background 0.4s, border-color 0.4s;
+    }
+    .item:active {
+      transform: scale(0.98);
+    }
+    .item .ic {
+      flex: none;
+      width: 34px;
+      height: 34px;
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      background: linear-gradient(135deg, #ffd1de, #f7a1bc);
+      font-size: 16px;
+    }
+    .item .tx {
+      flex: 1;
+      min-width: 0;
+      overflow-wrap: anywhere;
+    }
+    .item .on {
+      display: none;
+    }
+    .item.open {
+      background: #fff;
+      border-color: #e59ab3;
+      cursor: default;
+    }
+    .item.open .off {
+      display: none;
+    }
+    .item.open .on {
+      display: block;
+      animation: fin 0.6s both;
+    }
+
+    /* Stage 8: 3D Flip Vaini VIP Vouchers */
+    .promise-grid {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 11px;
+      perspective: 1100px;
+    }
+    .pcard {
+      position: relative;
+      width: 100%;
+      min-height: 76px;
+      cursor: pointer;
+      transform-style: preserve-3d;
+      transition: transform 0.72s cubic-bezier(0.34, 1.4, 0.64, 1);
+    }
+    .pcard.flipped {
+      transform: rotateX(180deg);
+      cursor: default;
+    }
+    .pface {
+      position: absolute;
+      inset: 0;
+      backface-visibility: hidden;
+      -webkit-backface-visibility: hidden;
+      border-radius: 18px;
+      padding: 12px 15px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      text-align: left;
+      box-shadow: 0 12px 26px -14px rgba(184, 37, 85, 0.52);
+    }
+    .pfront {
+      background: linear-gradient(135deg, #fff8fa 0%, #fde6ee 100%);
+      border: 1.5px solid #e9b465;
+    }
+    .pback {
+      transform: rotateX(180deg);
+      background: linear-gradient(135deg, #ffffff 0%, #fff4f7 100%);
+      border: 1.5px solid #e291ac;
+    }
+    .wax {
+      flex: none;
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      background: radial-gradient(circle at 35% 30%, #f05a8c, #b4194c);
+      border: 2px solid #f3cf7a;
+      color: #fff;
+      font-size: 16px;
+      display: grid;
+      place-items: center;
+      box-shadow: 0 4px 10px rgba(180, 25, 76, 0.35);
+    }
+    .pback .wax {
+      background: linear-gradient(135deg, #ffe7a8, #f2be5c);
+      color: #8f3250;
+      border-color: #fff;
+    }
+    .ptx {
+      flex: 1;
+      min-width: 0;
+      font-size: 14px;
+      font-weight: 600;
+      line-height: 1.38;
+      color: var(--ink);
+      overflow-wrap: anywhere;
+    }
+    .pfront .ptx {
+      color: var(--head);
+    }
+
+    /* Stage 9: Royal Scroll / Newspaper "VAINI TIMES" (Completely different from Envelope!) */
+    .scroll-box {
+      width: 100%;
+      max-width: 365px;
+      background: #fffdf8;
+      border: 2px solid #e4c686;
+      border-radius: 16px;
+      box-shadow: 0 18px 40px -14px rgba(120, 40, 70, 0.45);
+      overflow: hidden;
+      text-align: left;
+      animation: enter 0.75s both;
+    }
+    .news-hdr {
+      background: linear-gradient(135deg, #fbe5ec, #f8d4e0);
+      border-bottom: 2px double #d4af37;
+      padding: 12px 14px 10px;
+      text-align: center;
+    }
+    .news-tag {
+      font-size: 10px;
+      font-weight: 800;
+      letter-spacing: 1.6px;
+      text-transform: uppercase;
+      color: #9c3858;
+    }
+    .news-title {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-weight: 800;
+      font-size: 24px;
+      color: var(--head);
+      letter-spacing: 0.5px;
+      margin: 2px 0;
+    }
+    .news-meta {
+      display: flex;
+      justify-content: space-between;
+      font-size: 10.5px;
+      font-weight: 700;
+      color: #7c495a;
+      border-top: 1px solid rgba(184, 37, 85, 0.25);
+      padding-top: 5px;
+      margin-top: 4px;
+    }
+    .news-body {
+      padding: 14px 16px 16px;
+      font-family: 'Caveat', cursive;
+      font-weight: 600;
+      font-size: clamp(20px, 5.4vw, 23px);
+      line-height: 29px;
+      color: #5c2539;
+      white-space: pre-wrap;
+      max-height: min(calc(var(--u) * 44), 360px);
+      overflow-y: auto;
+      -webkit-overflow-scrolling: touch;
+      overflow-wrap: anywhere;
+    }
+    .news-stamp {
+      display: inline-block;
+      margin-top: 10px;
+      padding: 3px 10px;
+      border: 2px solid #c81e55;
+      border-radius: 6px;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: 1px;
+      color: #c81e55;
+      transform: rotate(-3deg);
+    }
+
+    /* Stage 10: Gift Finale (Clean Trophy & Celebration Finale, No Bear/Rabbit/Secret) */
+    .gift {
+      width: min(200px, 54vw, calc(var(--u) * 26));
+      height: auto;
+      display: block;
+      cursor: pointer;
+      animation: giftShake 2.2s ease-in-out infinite;
+      overflow: visible;
+      filter: drop-shadow(0 16px 24px rgba(184, 37, 85, 0.28));
+    }
+    .gift .glid {
+      transform-box: fill-box;
+      transform-origin: 50% 100%;
+      transition: transform 0.55s cubic-bezier(0.34, 1.56, 0.64, 1), opacity 0.45s;
+    }
+    .gift.opening {
+      animation: none;
+    }
+    .gift.opening .glid {
+      transform: translateY(-34px) rotate(-14deg) scale(1.04);
+      opacity: 0;
+    }
+    @keyframes giftShake {
+      0%,
+      100% {
+        transform: rotate(0);
+      }
+      15% {
+        transform: rotate(-6deg) scale(1.04);
+      }
+      30% {
+        transform: rotate(6deg) scale(1.04);
+      }
+      45% {
+        transform: rotate(-4deg);
+      }
+      60% {
+        transform: rotate(3deg);
+      }
+      75%,
+      90% {
+        transform: rotate(0);
+      }
+    }
+    .final {
+      width: 100%;
+      max-width: 360px;
+      padding: 22px 18px 20px;
+      border-radius: 24px;
+      background: rgba(255, 255, 255, 0.92);
+      border: 1.5px solid #f2b7c6;
+      box-shadow: 0 20px 44px -16px rgba(184, 37, 85, 0.5);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+      animation: enter 0.9s both;
+    }
+    .final .big {
+      font-family: 'Caveat', cursive;
+      font-weight: 700;
+      font-size: clamp(32px, 9vw, 40px);
+      color: var(--head);
+      line-height: 1.1;
+    }
+    .final .sub {
+      max-width: 300px;
+    }
+    .devar-badge {
+      margin-top: 4px;
+      padding: 8px 16px;
+      border-radius: 999px;
+      background: linear-gradient(135deg, #fff5f8, #fde2eb);
+      border: 1px solid #f0b4c6;
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--head);
+    }
+
+    #conf {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      z-index: 30;
+    }
+
+    /* Chrome Controls */
+    #dots {
+      position: absolute;
+      bottom: calc(16px + env(safe-area-inset-bottom));
+      left: 0;
+      right: 0;
+      display: flex;
+      justify-content: center;
+      gap: 6px;
+      z-index: 10;
+      pointer-events: none;
+    }
+    #dots i {
+      width: 6px;
+      height: 6px;
+      border-radius: 99px;
+      background: rgba(209, 35, 92, 0.25);
+      transition: all 0.5s;
+    }
+    #dots i.on {
+      width: 22px;
+      background: var(--rose);
+    }
+    #mute,
+    #adminHeart {
+      position: absolute;
+      top: calc(12px + env(safe-area-inset-top));
+      z-index: 20;
+      border: 0;
+      border-radius: 50%;
+      width: 40px;
+      height: 40px;
+      cursor: pointer;
+      display: grid;
+      place-items: center;
+    }
+    #mute {
+      left: 12px;
+      background: rgba(255, 255, 255, 0.78);
+      border: 1px solid #eed4dc;
+      font-size: 16px;
+      opacity: 0.9;
+    }
+    #adminHeart {
+      right: 12px;
+      background: transparent;
+      opacity: 0.28;
+      color: var(--rose);
+    }
+    #adminHeart:hover {
+      opacity: 0.58;
+    }
+
+    /* 15-Second Smart Skip Pill */
+    #skipBtn {
+      position: absolute;
+      right: 14px;
+      bottom: calc(14px + env(safe-area-inset-bottom));
+      z-index: 22;
+      background: rgba(255, 255, 255, 0.9);
+      border: 1.5px solid #edc2cf;
+      color: var(--head);
+      font-size: 12px;
+      font-weight: 700;
+      padding: 8px 14px;
+      border-radius: 999px;
+      cursor: pointer;
+      box-shadow: 0 6px 16px -6px rgba(184, 37, 85, 0.35);
+      opacity: 0;
+      transform: translateY(10px);
+      pointer-events: none;
+      transition: opacity 0.45s ease, transform 0.45s ease, background 0.2s;
+    }
+    #skipBtn.on {
+      opacity: 0.94;
+      transform: translateY(0);
+      pointer-events: auto;
+    }
+    #skipBtn:hover {
+      opacity: 1;
+      background: #fff;
+    }
+
+    /* Admin Modal */
+    #modal {
+      position: absolute;
+      inset: 0;
+      z-index: 100;
+      background: rgba(60, 20, 40, 0.55);
+      backdrop-filter: blur(4px);
+      -webkit-backdrop-filter: blur(4px);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: calc(12px + env(safe-area-inset-top)) 12px calc(12px + env(safe-area-inset-bottom));
+      user-select: text;
+      -webkit-user-select: text;
+    }
+    #modal.on {
+      display: flex;
+    }
+    .mbox {
+      background: #fff8f9;
+      border-radius: 20px;
+      width: min(560px, 100%);
+      max-height: 90dvh;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+      box-shadow: 0 30px 60px -20px rgba(0, 0, 0, 0.5);
+    }
+    .mhead {
+      padding: 15px 18px;
+      border-bottom: 1px solid #f0cfd9;
+      font: italic 700 23px 'Playfair Display', serif;
+      color: var(--head);
+    }
+    .mbody {
+      padding: 6px 18px 16px;
+      overflow-y: auto;
+      -webkit-overflow-scrolling: touch;
+    }
+    .mbody label {
+      display: block;
+      font-size: 11px;
+      font-weight: 700;
+      margin: 14px 0 5px;
+      color: #7a4a5a;
+      text-transform: uppercase;
+      letter-spacing: 0.6px;
+    }
+    .mbody input[type='text'],
+    .mbody textarea {
+      width: 100%;
+      border: 1.5px solid #efc4d1;
+      border-radius: 10px;
+      padding: 10px 12px;
+      font: 500 16px 'Plus Jakarta Sans', sans-serif;
+      background: #fff;
+      color: #4a2030;
+    }
+    .mbody textarea {
+      min-height: 140px;
+      resize: vertical;
+      line-height: 1.5;
+    }
+    .mbody input:focus,
+    .mbody textarea:focus {
+      outline: none;
+      border-color: var(--rose);
+    }
+    .g2 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 8px;
+    }
+    .g1 {
+      display: grid;
+      gap: 8px;
+    }
+    .pitem {
+      display: flex;
+      gap: 8px;
+      align-items: center;
+      margin-top: 8px;
+      background: #fff;
+      border: 1.5px solid #f6d0da;
+      border-radius: 12px;
+      padding: 6px;
+    }
+    .pitem img {
+      width: 44px;
+      height: 44px;
+      object-fit: cover;
+      border-radius: 8px;
+      flex: none;
+    }
+    .pitem input {
+      flex: 1;
+      min-width: 0;
+    }
+    .pitem button {
+      border: 0;
+      background: #fde1e8;
+      color: var(--head);
+      border-radius: 8px;
+      width: 32px;
+      height: 34px;
+      cursor: pointer;
+      font-weight: 700;
+      flex: none;
+    }
+    .mfoot {
+      padding: 12px 18px;
+      border-top: 1px solid #f0cfd9;
+      background: #fdf3f5;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      align-items: center;
+    }
+    .mfoot .btn {
+      padding: 10px 15px;
+      font-size: 13px;
+      min-height: 38px;
+    }
+    .mfoot .btn::after {
+      display: none;
+    }
+    #a_msg {
+      font-size: 12px;
+      color: var(--soft);
+      padding: 0 18px 8px;
+      min-height: 20px;
+    }
+  </style>
+</head>
+<body>
+  <div id="root"></div>
+  <script id="cfg">window.BAKED=null;</script>
+  <script>
+    (function () {
+      'use strict';
+      var KEY = 'neha_vaini_unique_v2';
+      var $ = function (s, p) {
+        return (p || document).querySelector(s);
+      };
+      var esc = function (s) {
+        return String(s == null ? '' : s).replace(/[&<>"']/g, function (c) {
+          return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c];
+        });
+      };
+
+      /* ---------- DEFAULT CONFIG (UNIQUE VAINI EDITION) ---------- */
+      function ph(title, a, b, emoji) {
+        var svg =
+          '<svg xmlns="http://www.w3.org/2000/svg" width="400" height="440" viewBox="0 0 400 440">' +
+          '<defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1">' +
+          '<stop offset="0" stop-color="' + a + '"/>' +
+          '<stop offset="1" stop-color="' + b + '"/>' +
+          '</linearGradient></defs>' +
+          '<rect width="400" height="440" fill="url(#g)"/>' +
+          '<circle cx="200" cy="185" r="85" fill="#fff" opacity=".45"/>' +
+          '<text x="200" y="215" font-size="84" text-anchor="middle">' + emoji + '</text>' +
+          '<text x="200" y="320" font-family="Georgia,serif" font-style="italic" font-size="24" fill="#5c3e47" text-anchor="middle">' + title + '</text>' +
+          '</svg>';
+        return 'data:image/svg+xml;charset=UTF-8,' + encodeURIComponent(svg);
+      }
+
+      var DEFAULT = {
+        name: 'Neha Vaini',
+        welcomeSubtitle: "Ready for your special Devar-approved birthday surprise?",
+        balloonWords: ['Best', 'Vaini', 'In', 'The World'],
+        reasons: [
+          "You handle Dada's mood swings like an absolute boss 😂",
+          'You bring so much warmth, energy, and laughter into our home ✨',
+          'You are way more like an older sister than a sister-in-law 🌸',
+          'You always have my back whenever I need backup at home 🙌',
+          'Honestly, Dada definitely married way out of his league 😎'
+        ],
+        promises: [
+          '1x Automatic backup in any argument with Dada 🤝',
+          '1x Coffee or dessert treat, courtesy of your favorite Devar ☕',
+          '1x Small favor granted with zero complaints (valid anytime) 🎟️'
+        ],
+        letterBody:
+          "BREAKING NEWS: Today is officially the birthday of the coolest Vaini in the family! 🎂\n\nThank you for bringing so much happiness, patience, and good vibes into our home every single day. Having you around makes everything brighter.\n\nAlso, huge respect for putting up with Dada on a daily basis—you honestly deserve a national award for that alone!\n\nOn your special day, I wish you endless joy, good health, and success in everything you do. Remember, no matter what happens, your Devar is always in your corner.\n\nHave an awesome birthday celebration today! 🥂✨\n\n— Reported live by Your Favorite Devar 🙌",
+        photos: [
+          { src: ph('Best Vaini', '#ffdde6', '#f8b4c8', '👑'), caption: 'Happy Birthday Vaini! 🎂' },
+          { src: ph('Family MVP', '#ffe8d6', '#f9c6c9', '🏆'), caption: 'The real boss of the house 🎉' },
+          { src: ph('Make a Wish', '#e8dff5', '#fce1e4', '🎈'), caption: 'Wishing you the best year ahead 🎈' },
+          { src: ph('Team Vaini', '#fce1e4', '#fad2e1', '🙌'), caption: 'Always on your team! ✨' },
+          { src: ph('Stay Awesome', '#fff1e6', '#fad2e1', '🌟'), caption: 'Cheers to our favorite Vaini 🥂' }
+        ],
+        _t: 0
+      };
+
+      var CFG;
+      function norm(c) {
+        var o = JSON.parse(JSON.stringify(DEFAULT));
+        if (c) {
+          if (c.name) o.name = String(c.name);
+          if (c.welcomeSubtitle) o.welcomeSubtitle = String(c.welcomeSubtitle);
+          if (Array.isArray(c.balloonWords)) {
+            for (var i = 0; i < 4; i++) if (c.balloonWords[i]) o.balloonWords[i] = String(c.balloonWords[i]);
+          }
+          if (Array.isArray(c.reasons)) {
+            for (var j = 0; j < 5; j++) if (c.reasons[j]) o.reasons[j] = String(c.reasons[j]);
+          }
+          var promSrc = Array.isArray(c.promises) ? c.promises : c.coupons;
+          if (Array.isArray(promSrc)) {
+            for (var k = 0; k < 3; k++) if (promSrc[k]) o.promises[k] = String(promSrc[k]);
+          }
+          if (c.letterBody) o.letterBody = String(c.letterBody);
+          if (Array.isArray(c.photos) && c.photos.length) {
+            o.photos = c.photos.slice(0, 10).map(function (p) {
+              return { src: p.src, caption: p.caption || '' };
+            });
+          }
+          o._t = c._t || 0;
+        }
+        return o;
+      }
+
+      function loadCfg() {
+        var l = null;
+        try {
+          var s = localStorage.getItem(KEY);
+          if (s) l = JSON.parse(s);
+        } catch (e) {}
+        var b = window.BAKED,
+          c;
+        if (l && b) c = (l._t || 0) > (b._t || 0) ? l : b;
+        else c = l || b;
+        CFG = norm(c);
+      }
+      loadCfg();
+
+      /* ---------- SHELL ---------- */
+      var root = $('#root');
+      root.innerHTML =
+        '<div id="orbs"><i></i><i></i><i></i></div>' +
+        '<div id="hearts"></div>' +
+        '<div id="dim"></div>' +
+        '<div id="stage"></div>' +
+        '<canvas id="conf"></canvas>' +
+        '<div id="dots"></div>' +
+        '<button id="mute" title="Sound" aria-label="Toggle sound">🔊</button>' +
+        '<button id="adminHeart" aria-label="Customize"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l7.1-1.01L12 2z"/></svg></button>' +
+        '<button id="skipBtn" aria-label="Skip stage">Skip →</button>' +
+        '<div id="modal"></div>';
+
+      var stage = $('#stage'),
+        dim = $('#dim'),
+        dots = $('#dots'),
+        skipBtn = $('#skipBtn');
+      var TOTAL = 10;
+      for (var di = 0; di < TOTAL; di++) dots.appendChild(document.createElement('i'));
+
+      /* ---------- SOFT LOW-VOLUME MUSIC-BOX ENGINE ---------- */
+      var AC,
+        master,
+        bus,
+        muted = false;
+      function ac() {
+        try {
+          if (!AC) {
+            var C = window.AudioContext || window.webkitAudioContext;
+            if (!C) return null;
+            AC = new C();
+            master = AC.createGain();
+            master.gain.value = 0.14;
+            master.connect(AC.destination);
+            bus = AC.createGain();
+            bus.connect(master);
+            var d = AC.createDelay(1);
+            d.delayTime.value = 0.26;
+            var fb = AC.createGain();
+            fb.gain.value = 0.26;
+            var wet = AC.createGain();
+            wet.gain.value = 0.26;
+            bus.connect(d);
+            d.connect(fb);
+            fb.connect(d);
+            d.connect(wet);
+            wet.connect(master);
+          }
+          if (AC.state === 'suspended') AC.resume();
+          return AC;
+        } catch (e) {
+          return null;
+        }
+      }
+
+      function note(f, t0, d, v, oct) {
+        if (muted) return;
+        try {
+          var c = ac();
+          if (!c) return;
+          t0 = t0 || 0;
+          d = d || 0.7;
+          v = v == null ? 0.5 : v;
+          oct = oct == null ? 0.15 : oct;
+          var t = c.currentTime + t0,
+            g = c.createGain();
+          g.gain.setValueAtTime(0.0001, t);
+          g.gain.linearRampToValueAtTime(v, t + 0.012);
+          g.gain.exponentialRampToValueAtTime(0.0001, t + d);
+          g.connect(bus);
+          var o = c.createOscillator();
+          o.type = 'sine';
+          o.frequency.value = f;
+          o.connect(g);
+          o.start(t);
+          o.stop(t + d + 0.05);
+          if (oct) {
+            var o2 = c.createOscillator(),
+              g2 = c.createGain();
+            o2.type = 'triangle';
+            o2.frequency.value = f * 2;
+            g2.gain.value = oct;
+            o2.connect(g2);
+            g2.connect(g);
+            o2.start(t);
+            o2.stop(t + d + 0.05);
+          }
+        } catch (e) {}
+      }
+
+      function noise(t0, d, f0, f1, v, type) {
+        if (muted) return;
+        try {
+          var c = ac();
+          if (!c) return;
+          var n = Math.floor(c.sampleRate * d),
+            b = c.createBuffer(1, n, c.sampleRate),
+            a = b.getChannelData(0);
+          for (var i = 0; i < n; i++) a[i] = (Math.random() * 2 - 1) * Math.sin((i / n) * Math.PI);
+          var s = c.createBufferSource();
+          s.buffer = b;
+          var f = c.createBiquadFilter();
+          f.type = type || 'lowpass';
+          var t = c.currentTime + t0;
+          f.frequency.setValueAtTime(f0, t);
+          f.frequency.exponentialRampToValueAtTime(f1, t + d);
+          var g = c.createGain();
+          g.gain.value = v;
+          s.connect(f);
+          f.connect(g);
+          g.connect(master);
+          s.start(t);
+        } catch (e) {}
+      }
+
+      var STAR = [523.25, 587.33, 659.25, 783.99, 880, 1046.5, 1174.66, 1318.5, 1568];
+      var S = {
+        tap: function () {
+          note(587.33, 0, 0.25, 0.5);
+        },
+        pop: function (i) {
+          if (muted) return;
+          try {
+            var c = ac();
+            if (!c) return;
+            var t = c.currentTime,
+              o = c.createOscillator(),
+              g = c.createGain();
+            o.type = 'sine';
+            o.frequency.setValueAtTime(340, t);
+            o.frequency.exponentialRampToValueAtTime(140, t + 0.08);
+            g.gain.setValueAtTime(0.55, t);
+            g.gain.exponentialRampToValueAtTime(0.0001, t + 0.09);
+            o.connect(g);
+            g.connect(master);
+            o.start(t);
+            o.stop(t + 0.1);
+            var h = [1046.5, 1318.51, 1567.98, 1975.53];
+            note(h[i % 4], 0.03, 0.9, 0.55);
+          } catch (e) {}
+        },
+        blow: function () {
+          noise(0, 0.8, 520, 160, 0.9);
+          [349.23, 440, 523.25, 659.25].forEach(function (f, i) {
+            note(f, 0.28 + i * 0.08, 1.5, 0.4);
+          });
+        },
+        swipe: function () {
+          noise(0, 0.14, 900, 900, 0.35, 'bandpass');
+          note(659.25, 0.02, 0.3, 0.35);
+        },
+        env: function () {
+          [523.25, 659.25, 783.99].forEach(function (f, i) {
+            note(f, i * 0.1, 0.8, 0.5);
+          });
+        },
+        tick: function () {
+          note(880, 0, 0.07, 0.14, 0);
+        },
+        star: function (i) {
+          note(STAR[i % 9], 0, 1.1, 0.5);
+          note(STAR[i % 9] * 2, 0.05, 0.6, 0.12, 0);
+        },
+        reveal: function () {
+          note(783.99, 0, 0.5, 0.45);
+          note(1174.66, 0.08, 0.7, 0.3);
+        },
+        fin: function () {
+          [523.25, 659.25, 783.99, 987.77, 1174.66, 1046.5].forEach(function (f, i) {
+            note(f, i * 0.11, 1.2, 0.6);
+          });
+        },
+        chord: function () {
+          [523.25, 659.25, 783.99, 1046.5].forEach(function (f, i) {
+            note(f, i * 0.07, 1.8, 0.45);
+          });
+        }
+      };
+
+      $('#mute').onclick = function () {
+        muted = !muted;
+        this.textContent = muted ? '🔇' : '🔊';
+        if (!muted) {
+          ac();
+          S.tap();
+        }
+      };
+
+      /* ---------- AMBIENT SPARKLES & STARS ---------- */
+      var hcols = ['#f4a6bb', '#f7b6c6', '#ffc8d6', '#e98aa6', '#ffd9a8'];
+      setInterval(function () {
+        if (document.hidden) return;
+        var h = document.createElement('span');
+        h.className = 'fh';
+        h.textContent = Math.random() < 0.5 ? '✦' : '★';
+        h.style.left = Math.random() * 100 + 'vw';
+        h.style.fontSize = 10 + Math.random() * 18 + 'px';
+        h.style.color = hcols[Math.floor(Math.random() * hcols.length)];
+        h.style.setProperty('--dx', Math.random() * 70 - 35 + 'px');
+        h.style.setProperty('--r', Math.random() * 60 - 30 + 'deg');
+        h.style.animationDuration = 8 + Math.random() * 8 + 's';
+        $('#hearts').appendChild(h);
+        setTimeout(function () {
+          h.remove();
+        }, 17000);
+      }, 700);
+
+      /* ---------- NAVIGATION & 15-SECOND SMART SKIP ---------- */
+      var cur = -1,
+        timers = [],
+        intervals = [],
+        busy = false,
+        skipTimer = null;
+
+      function T(fn, ms) {
+        var t = setTimeout(fn, ms);
+        timers.push(t);
+        return t;
+      }
+      function I(fn, ms) {
+        var iv = setInterval(fn, ms);
+        intervals.push(iv);
+        return iv;
+      }
+      function clearAllTimers() {
+        timers.forEach(clearTimeout);
+        timers = [];
+        intervals.forEach(clearInterval);
+        intervals = [];
+        clearTimeout(skipTimer);
+        skipTimer = null;
+      }
+      function scheduleSkip(n) {
+        skipBtn.classList.remove('on');
+        clearTimeout(skipTimer);
+        if (n < TOTAL - 1) {
+          skipTimer = setTimeout(function () {
+            if (!$('#modal').classList.contains('on') && cur === n) {
+              skipBtn.classList.add('on');
+            }
+          }, 15000);
+        }
+      }
+      skipBtn.onclick = function () {
+        if (cur < TOTAL - 1 && !busy) {
+          S.tap();
+          go(cur + 1);
+        }
+      };
+
+      function go(n) {
+        if (busy) return;
+        clearAllTimers();
+        skipBtn.classList.remove('on');
+        var run = function () {
+          stage.classList.remove('leave', 'twilight');
+          dim.classList.remove('on');
+          stage.innerHTML = '<div class="in"></div>';
+          stage.scrollTop = 0;
+          cur = n;
+          busy = false;
+          document.title = 'Happy Birthday, ' + NM() + '! 🎂';
+          Array.prototype.forEach.call(dots.children, function (d, i) {
+            d.classList.toggle('on', i === n);
+          });
+          scheduleSkip(n);
+          STAGES[n](stage.firstChild);
+        };
+        if (cur < 0) {
+          run();
+          return;
+        }
+        busy = true;
+        stage.classList.add('leave');
+        setTimeout(run, 310);
+      }
+
+      function next() {
+        S.tap();
+        go(cur + 1);
+      }
+      var NM = function () {
+        return (CFG.name || 'Neha Vaini').trim();
+      };
+
+      /* ---------- STAGE 1: WELCOME (ROYAL CROWN & CELEBRATION) ---------- */
+      function bunting() {
+        var cols = ['#f7a1b8', '#ffd27a', '#9ed9e8', '#c3a6f0', '#a8e3c1'],
+          s = '';
+        for (var i = 0; i < 9; i++) {
+          var t = (i + 1) / 10,
+            u = 1 - t,
+            x = u * u * 4 + 2 * u * t * 190 + t * t * 376,
+            y = u * u * 6 + 2 * u * t * 70 + t * t * 6;
+          s += '<polygon points="' + (x - 14) + ',' + y + ' ' + (x + 14) + ',' + y + ' ' + x + ',' + (y + 30) + '" fill="' + cols[i % 5] + '"/>';
+        }
+        return '<svg class="bunting" viewBox="0 0 380 76"><path d="M4 6 Q190 70 376 6" stroke="#b82555" stroke-width="2" fill="none" stroke-linecap="round"/>' + s + '</svg>';
+      }
+
+      function st1(box) {
+        box.innerHTML =
+          bunting() +
+          '<h1>Happy Birthday,<span class="nm">' + esc(NM()) + '</span></h1>' +
+          '<svg class="scene" viewBox="0 0 280 210">' +
+          '<defs>' +
+          '<linearGradient id="crGold" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#fff0b3"/><stop offset=".5" stop-color="#f5c453"/><stop offset="1" stop-color="#c98e1e"/></linearGradient>' +
+          '<linearGradient id="crVelvet" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f05a8c"/><stop offset="1" stop-color="#a81646"/></linearGradient>' +
+          '</defs>' +
+          /* Soft cushion & glow */
+          '<ellipse cx="140" cy="182" rx="95" ry="14" fill="#e5b8c6" opacity=".55"/>' +
+          '<path d="M56 168 Q140 148 224 168 Q210 186 140 186 Q70 186 56 168 Z" fill="url(#crVelvet)" stroke="#d4af37" stroke-width="2"/>' +
+          /* Royal Crown */
+          '<path d="M72 156 L58 84 L104 118 L140 62 L176 118 L222 84 L208 156 Z" fill="url(#crGold)" stroke="#b87e18" stroke-width="2.5" stroke-linejoin="round"/>' +
+          '<rect x="70" y="146" width="140" height="16" rx="6" fill="url(#crGold)" stroke="#b87e18" stroke-width="2"/>' +
+          /* Crown Jewels & Pearls */
+          '<circle cx="58" cy="78" r="7" fill="#fff" stroke="#d4af37" stroke-width="2"/>' +
+          '<circle cx="140" cy="54" r="9" fill="#ff6f9c" stroke="#fff" stroke-width="2"/>' +
+          '<circle cx="222" cy="78" r="7" fill="#fff" stroke="#d4af37" stroke-width="2"/>' +
+          '<circle cx="104" cy="134" r="6" fill="#7ec8e3" stroke="#fff" stroke-width="1.5"/>' +
+          '<circle cx="140" cy="132" r="8" fill="#e82e6b" stroke="#fff" stroke-width="1.5"/>' +
+          '<circle cx="176" cy="134" r="6" fill="#7ec8e3" stroke="#fff" stroke-width="1.5"/>' +
+          /* Sparkles */
+          '<path class="tw" d="M32 54 l4 10 10 4 -10 4 -4 10 -4 -10 -10 -4 10 -4z" fill="#ffd54f"/>' +
+          '<path class="tw" style="animation-delay:-1s" d="M248 48 l4 10 10 4 -10 4 -4 10 -4 -10 -10 -4 10 -4z" fill="#ffd54f"/>' +
+          '<circle class="tw" cx="44" cy="128" r="4" fill="#f48fb1"/><circle class="tw" style="animation-delay:-.6s" cx="236" cy="124" r="4" fill="#f48fb1"/>' +
+          '</svg>' +
+          '<p class="q">' + esc(CFG.welcomeSubtitle) + '</p>' +
+          '<div class="rowbox" id="row"><button class="btn" id="yes">Yes, let\'s go!</button><button class="btn ghost" id="no">No</button></div>';
+
+        var row = $('#row', box),
+          yes = $('#yes', box),
+          no = $('#no', box),
+          words = ['No', 'Not allowed! 🙈', 'Nice try Vaini 😂', 'Devar\'s orders: click Yes', 'Too slow! ✨'],
+          k = 0;
+
+        yes.onclick = function () {
+          S.tap();
+          go(1);
+        };
+
+        function run(e) {
+          if (e && e.cancelable) e.preventDefault();
+          S.tap();
+          k++;
+          no.textContent = words[k % words.length];
+          var W = row.clientWidth,
+            H = row.clientHeight,
+            bx = no.offsetLeft,
+            by = no.offsetTop,
+            w = no.offsetWidth,
+            h = no.offsetHeight;
+          var yl = yes.offsetLeft - 12,
+            yt = yes.offsetTop - 12,
+            yr = yes.offsetLeft + yes.offsetWidth + 12,
+            yb = yes.offsetTop + yes.offsetHeight + 12,
+            tx = 0,
+            ty = 0;
+          for (var i = 0; i < 30; i++) {
+            var cx = 4 + Math.random() * Math.max(1, W - w - 8),
+              cy = 4 + Math.random() * Math.max(1, H - h - 8);
+            var hit = cx < yr && cx + w > yl && cy < yb && cy + h > yt;
+            if (!hit) {
+              tx = cx - bx;
+              ty = cy - by;
+              break;
+            }
+          }
+          no.style.transform = 'translate(' + tx + 'px,' + ty + 'px)';
+        }
+        no.addEventListener('pointerenter', run);
+        no.addEventListener('pointerdown', run);
+        no.addEventListener('click', run);
+      }
+
+      /* ---------- STAGE 2: BALLOONS ---------- */
+      function balloon(id, a, b, c) {
+        return (
+          '<svg viewBox="0 0 100 140"><defs><radialGradient id="bg' + id + '" cx="35%" cy="30%" r="70%">' +
+          '<stop offset="0" stop-color="' + a + '"/><stop offset=".55" stop-color="' + b + '"/><stop offset="1" stop-color="' + c + '"/>' +
+          '</radialGradient></defs><path d="M50 98 Q42 110 52 120 Q60 129 48 138" stroke="' + c + '" stroke-width="2" fill="none" stroke-linecap="round"/>' +
+          '<polygon points="44,100 56,100 50,91" fill="' + c + '"/>' +
+          '<ellipse cx="50" cy="48" rx="37" ry="45" fill="url(#bg' + id + ')"/>' +
+          '<ellipse cx="35" cy="30" rx="7" ry="13" transform="rotate(-24 35 30)" fill="#fff" opacity=".55"/></svg>'
+        );
+      }
+
+      function st2(box) {
+        var C = [
+            ['#d4f0ff', '#8ecae6', '#5fa8d3'],
+            ['#ffe0ea', '#f7a1bc', '#e56b92'],
+            ['#dcfce7', '#86efac', '#4ade80'],
+            ['#f3e8ff', '#c4b5fd', '#9b87f5']
+          ],
+          n = 0,
+          W = CFG.balloonWords;
+
+        box.innerHTML =
+          '<h2>Pop all 4 balloons</h2>' +
+          '<p class="sub" id="cnt">0 / 4 popped</p>' +
+          '<div class="grid">' +
+          C.map(function (c, i) {
+            var w = W[i] || '',
+              fs = w.length > 8 ? 24 : w.length > 5 ? 30 : 38;
+            return '<div class="bal" data-i="' + i + '">' + balloon(i, c[0], c[1], c[2]) + '<span class="word" style="font-size:' + fs + 'px">' + esc(w) + '</span></div>';
+          }).join('') +
+          '</div>' +
+          '<p class="hand reveal" id="ban" style="font-size:clamp(28px,8vw,36px);color:#b82555;line-height:1.1">✨ ' + esc(W.join(' ')) + ' ✨</p>';
+
+        Array.prototype.forEach.call(box.querySelectorAll('.bal'), function (b) {
+          b.onclick = function () {
+            if (b.classList.contains('popped')) return;
+            var i = +b.dataset.i;
+            b.classList.add('popped');
+            S.pop(i);
+            for (var k = 0; k < 12; k++) {
+              var s = document.createElement('i');
+              s.className = 'spark';
+              s.style.background = C[i][1];
+              var a = (k / 12) * 6.283,
+                r = 46 + Math.random() * 24;
+              s.style.setProperty('--x', Math.cos(a) * r + 'px');
+              s.style.setProperty('--y', Math.sin(a) * r + 'px');
+              b.appendChild(s);
+              (function (s) {
+                setTimeout(function () {
+                  s.remove();
+                }, 750);
+              })(s);
+            }
+            n++;
+            $('#cnt', box).textContent = n + ' / 4 popped';
+            if (n === 4) {
+              T(function () {
+                S.chord();
+                $('#ban', box).classList.add('on');
+              }, 450);
+              T(function () {
+                go(2);
+              }, 2400);
+            }
+          };
+        });
+      }
+
+      /* ---------- STAGE 3: CANDLE BLOW ---------- */
+      function st3(box) {
+        box.innerHTML =
+          '<div class="hdslot"><h2>Blow the candle, ' + esc(NM()) + '</h2><div class="wishtxt">Close your eyes &amp; make a wish ✨</div></div>' +
+          '<svg class="cake" id="cake" viewBox="0 0 300 264"><defs>' +
+          '<radialGradient id="hl"><stop offset="0" stop-color="#ffd27a" stop-opacity=".95"/><stop offset="1" stop-color="#ffd27a" stop-opacity="0"/></radialGradient>' +
+          '<linearGradient id="fl" x1="0" y1="1" x2="0" y2="0"><stop offset="0" stop-color="#ff7b00"/><stop offset="1" stop-color="#ffe066"/></linearGradient>' +
+          '<linearGradient id="choc1" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#7c4232"/><stop offset="1" stop-color="#53271c"/></linearGradient>' +
+          '<linearGradient id="choc2" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#8d4d3b"/><stop offset="1" stop-color="#612f22"/></linearGradient>' +
+          '<linearGradient id="ganache" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#451d14"/><stop offset="1" stop-color="#2b100a"/></linearGradient>' +
+          '<linearGradient id="plateG" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#f7e6eb"/><stop offset=".5" stop-color="#ffffff"/><stop offset="1" stop-color="#ebd0d9"/></linearGradient>' +
+          '</defs>' +
+          '<ellipse cx="150" cy="252" rx="64" ry="8" fill="#d9a5b6" opacity=".55"/>' +
+          '<path d="M134 226 L166 226 L176 250 L124 250 Z" fill="url(#plateG)" stroke="#e0bec9" stroke-width="1.5"/>' +
+          '<ellipse cx="150" cy="250" rx="50" ry="7" fill="url(#plateG)" stroke="#e0bec9" stroke-width="1.5"/>' +
+          '<ellipse cx="150" cy="224" rx="124" ry="12" fill="url(#plateG)" stroke="#d4af37" stroke-width="2"/>' +
+          '<rect x="52" y="158" width="196" height="66" rx="14" fill="url(#choc1)" stroke="#3e1b12" stroke-width="1.5"/>' +
+          '<rect x="53" y="188" width="194" height="9" fill="#ffd9e4" opacity=".92"/>' +
+          '<path d="M52 166 Q52 158 64 158 L236 158 Q248 158 248 166 L248 176 Q240 192 232 176 Q224 198 216 176 Q206 188 196 176 Q186 202 176 176 Q164 190 152 176 Q140 196 128 176 Q116 188 104 176 Q92 200 80 176 Q66 190 52 176 Z" fill="url(#ganache)"/>' +
+          '<g fill="#fff6f9" stroke="#f2bfd0" stroke-width="1">' +
+          '<circle cx="68" cy="221" r="7"/><circle cx="88" cy="222" r="7"/><circle cx="108" cy="223" r="7"/><circle cx="129" cy="223" r="7"/>' +
+          '<circle cx="150" cy="223" r="7"/><circle cx="171" cy="223" r="7"/><circle cx="192" cy="223" r="7"/><circle cx="212" cy="222" r="7"/><circle cx="232" cy="221" r="7"/>' +
+          '</g>' +
+          '<rect x="86" y="102" width="128" height="58" rx="12" fill="url(#choc2)" stroke="#472016" stroke-width="1.5"/>' +
+          '<rect x="87" y="128" width="126" height="7" fill="#ffe6ee" opacity=".9"/>' +
+          '<path d="M86 110 Q86 102 98 102 L202 102 Q214 102 214 110 L214 118 Q204 134 194 118 Q182 138 170 118 Q158 130 146 118 Q134 136 122 118 Q108 130 96 118 Q90 126 86 118 Z" fill="#fff5f8" stroke="#f4bfd0" stroke-width="1"/>' +
+          '<g>' +
+          '<path d="M106 102 C100 92 105 84 112 84 C119 84 124 92 118 102 Z" fill="#dc1c4e"/>' +
+          '<path d="M107 85 L112 89 L117 85" stroke="#3a8f4c" stroke-width="2.2" fill="none" stroke-linecap="round"/>' +
+          '<path d="M182 102 C176 92 181 84 188 84 C195 84 200 92 194 102 Z" fill="#dc1c4e"/>' +
+          '<path d="M183 85 L188 89 L193 85" stroke="#3a8f4c" stroke-width="2.2" fill="none" stroke-linecap="round"/>' +
+          '<circle cx="132" cy="108" r="2.2" fill="#d4af37"/><circle cx="168" cy="109" r="2.2" fill="#d4af37"/>' +
+          '<circle cx="114" cy="166" r="2.2" fill="#ffd27a"/><circle cx="150" cy="167" r="2.2" fill="#ffd27a"/><circle cx="186" cy="166" r="2.2" fill="#ffd27a"/>' +
+          '</g>' +
+          '<rect x="145" y="64" width="10" height="39" rx="3" fill="#fff" stroke="#e85d88" stroke-width="1.5"/>' +
+          '<path d="M145 73 L155 69 M145 82 L155 78 M145 91 L155 87 M145 99 L155 95" stroke="#e85d88" stroke-width="2.2"/>' +
+          '<circle class="halo" cx="150" cy="48" r="38" fill="url(#hl)"/>' +
+          '<g class="flame"><path d="M150 28 Q163 45 157 57 Q150 63 143 57 Q137 45 150 28Z" fill="url(#fl)"/><ellipse cx="150" cy="53" rx="3.8" ry="6.5" fill="#fff9d2"/></g>' +
+          '<circle class="smoke" cx="150" cy="54" r="8" fill="#b8b0b6"/><circle class="smoke" cx="155" cy="54" r="6" fill="#cfc8cd"/><circle class="smoke" cx="145" cy="54" r="5" fill="#dfd9dd"/>' +
+          '</svg>' +
+          '<p class="sub hint">(tap the candle)</p>';
+
+        var done = false;
+        $('#cake', box).onclick = function () {
+          if (done) return;
+          done = true;
+          S.blow();
+          this.classList.add('out');
+          stage.classList.add('twilight');
+          dim.classList.add('on');
+          T(function () {
+            S.chord();
+          }, 800);
+          T(function () {
+            go(3);
+          }, 4200);
+        };
+      }
+
+      /* ---------- STAGE 4: COMPLETE 7-POINT ROYAL CROWN CONSTELLATION ---------- */
+      function st4(box) {
+        // 7 stars forming a complete, unmistakable royal crown with 3 peaks + base band
+        var pts = [
+          [66, 184],  // 0: Bottom-left base
+          [48, 92],   // 1: Left crown peak
+          [104, 134], // 2: Left valley
+          [150, 62],  // 3: Center tallest crown peak
+          [196, 134], // 4: Right valley
+          [252, 92],  // 5: Right crown peak
+          [234, 184]  // 6: Bottom-right base
+        ];
+        // Continuous closed crown outline + inner base band line
+        var crownOutline = 'M 66 184 L 48 92 L 104 134 L 150 62 L 196 134 L 252 92 L 234 184 Z';
+        var fullLines = crownOutline + ' M 63 166 L 237 166';
+
+        var bg = '';
+        for (var k = 0; k < 24; k++) {
+          bg +=
+            '<circle class="tw" style="animation-delay:-' +
+            (Math.random() * 3).toFixed(1) +
+            's" cx="' +
+            (Math.random() * 300).toFixed(0) +
+            '" cy="' +
+            (Math.random() * 260).toFixed(0) +
+            '" r="' +
+            (Math.random() * 1.1 + 0.4).toFixed(1) +
+            '" fill="#fff"/>';
+        }
+
+        var stars = pts
+          .map(function (p, i) {
+            return (
+              '<g class="st" data-i="' +
+              i +
+              '">' +
+              '<circle class="glow" cx="' +
+              p[0] +
+              '" cy="' +
+              p[1] +
+              '" r="20" fill="#ffd27a" opacity=".4"/>' +
+              '<path class="core" d="M' +
+              p[0] +
+              ' ' +
+              (p[1] - 9) +
+              ' L' +
+              (p[0] + 2.7) +
+              ' ' +
+              (p[1] - 2.7) +
+              ' L' +
+              (p[0] + 9) +
+              ' ' +
+              p[1] +
+              ' L' +
+              (p[0] + 2.7) +
+              ' ' +
+              (p[1] + 2.7) +
+              ' L' +
+              p[0] +
+              ' ' +
+              (p[1] + 9) +
+              ' L' +
+              (p[0] - 2.7) +
+              ' ' +
+              (p[1] + 2.7) +
+              ' L' +
+              (p[0] - 9) +
+              ' ' +
+              p[1] +
+              ' L' +
+              (p[0] - 2.7) +
+              ' ' +
+              (p[1] - 2.7) +
+              'Z" fill="#8582bd"/>' +
+              '<circle cx="' +
+              p[0] +
+              '" cy="' +
+              p[1] +
+              '" r="24" fill="transparent"/>' +
+              '</g>'
+            );
+          })
+          .join('');
+
+        box.innerHTML =
+          '<h2>Connect the Royal Crown</h2>' +
+          '<div class="sky" id="sky"><svg viewBox="0 0 300 260"><defs><linearGradient id="nt" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#1b1a4a"/><stop offset="1" stop-color="#4b2a6b"/></linearGradient></defs><rect width="300" height="260" fill="url(#nt)"/>' +
+          bg +
+          '<path class="hfill" d="' +
+          crownOutline +
+          '"/><path class="line" d="' +
+          fullLines +
+          '"/>' +
+          stars +
+          '</svg></div>' +
+          '<div class="swap" id="sw"><p class="sub a" id="cnt">Tap all 7 stars ✨ 0 / 7</p><p class="hand b" style="font-size:clamp(28px,8vw,34px);color:#b82555;line-height:1.1">A complete crown for the Queen of the house 👑</p></div>' +
+          '<div class="slot"><button class="btn reveal" id="nx">Continue →</button></div>';
+
+        var n = 0;
+        Array.prototype.forEach.call(box.querySelectorAll('.st'), function (s) {
+          s.addEventListener('click', function () {
+            if (s.classList.contains('lit')) return;
+            s.classList.add('lit');
+            S.star(n);
+            n++;
+            $('#cnt', box).textContent = 'Tap all 7 stars ✨ ' + n + ' / 7';
+            if (n === 7) {
+              T(function () {
+                S.chord();
+                $('#sky', box).classList.add('done');
+                $('#sw', box).classList.add('on');
+              }, 450);
+              T(function () {
+                $('#nx', box).classList.add('on');
+              }, 2200);
+            }
+          });
+        });
+        $('#nx', box).onclick = next;
+      }
+
+      /* ---------- STAGE 5: INTERACTIVE BIRTHDAY FORTUNE WHEEL (REPLACES BOUQUET!) ---------- */
+      function st5(box) {
+        var slices = [
+          { label: 'No Chores Day', color: '#ffdde6', text: '#a31b48', msg: '🎉 Official Pass: Zero kitchen or house chores today! Dada is on duty.' },
+          { label: 'Dessert Treat', color: '#fff0d4', text: '#8f5b14', msg: '🍰 Sweet Victory: Unlimited cake & ice cream on your Devar today!' },
+          { label: 'Queen Mode', color: '#e6dcff', text: '#56389c', msg: '👑 Royal Decree: Everyone has to agree with Vaini for the next 24 hours!' },
+          { label: 'Shopping Pass', color: '#d9f5ec', text: '#1d6e58', msg: '🛍️ Bonus Perk: Dada owes you an extra birthday gift—no excuses!' },
+          { label: 'VIP Backup', color: '#ffe3d6', text: '#9c3d1e', msg: '🤝 Lifelong Guarantee: Your Devar is permanently on your team!' },
+          { label: 'Double Luck', color: '#fce1f0', text: '#9e2468', msg: '✨ Jackpot! Wishing you massive success, health & happiness all year!' }
+        ];
+
+        var segs = slices
+          .map(function (s, i) {
+            var a1 = (i * 60 - 90) * (Math.PI / 180);
+            var a2 = ((i + 1) * 60 - 90) * (Math.PI / 180);
+            var x1 = 150 + 140 * Math.cos(a1),
+              y1 = 150 + 140 * Math.sin(a1);
+            var x2 = 150 + 140 * Math.cos(a2),
+              y2 = 150 + 140 * Math.sin(a2);
+            var mid = i * 60 + 30;
+            return (
+              '<path d="M150,150 L' + x1.toFixed(1) + ',' + y1.toFixed(1) + ' A140,140 0 0,1 ' + x2.toFixed(1) + ',' + y2.toFixed(1) + ' Z" fill="' + s.color + '" stroke="#fff" stroke-width="2"/>' +
+              '<text x="150" y="54" fill="' + s.text + '" font-size="11.5" font-weight="800" text-anchor="middle" transform="rotate(' + mid + ' 150 150)">' + esc(s.label) + '</text>'
+            );
+          })
+          .join('');
+
+        box.innerHTML =
+          '<h2>Vaini\'s Birthday Spin Wheel 🎡</h2>' +
+          '<p class="sub" id="w-sub">Tap the wheel to spin your birthday perk!</p>' +
+          '<div class="wheel-wrap">' +
+          '<div class="wheel-pointer"></div>' +
+          '<svg class="wheel-svg" id="wheel" viewBox="0 0 300 300">' +
+          segs +
+          '<circle cx="150" cy="150" r="28" fill="#d1235c" stroke="#fff" stroke-width="3"/>' +
+          '<text x="150" y="154" fill="#fff" font-size="11" font-weight="800" text-anchor="middle">SPIN</text>' +
+          '</svg>' +
+          '</div>' +
+          '<div id="w-out" style="width:100%"></div>';
+
+        var spun = false;
+        $('#wheel', box).onclick = function () {
+          if (spun) return;
+          spun = true;
+          S.tap();
+          var winIdx = Math.floor(Math.random() * slices.length);
+          // Pointer is at top (0 deg). Center of slice i is at (i*60 + 30) deg clockwise from top.
+          // To bring slice i to top, rotate clockwise by (360 - (i*60 + 30)) + 5 full spins (1800)
+          var targetDeg = 1800 + (360 - (winIdx * 60 + 30));
+          this.style.transform = 'rotate(' + targetDeg + 'deg)';
+          $('#w-sub', box).textContent = 'Spinning... 🎲';
+
+          var tickCount = 0;
+          var tickIv = I(function () {
+            tickCount++;
+            if (tickCount < 18) S.tick();
+          }, 160);
+
+          T(function () {
+            clearInterval(tickIv);
+            S.chord();
+            $('#w-sub', box).textContent = 'You unlocked a birthday perk!';
+            $('#w-out', box).innerHTML =
+              '<div class="wheel-res"><p class="q" style="color:#b82555">' + slices[winIdx].msg + '</p></div>' +
+              '<div class="slot" style="margin-top:10px"><button class="btn" id="nx">Continue →</button></div>';
+            $('#nx', box).onclick = next;
+          }, 3700);
+        };
+      }
+
+      /* ---------- STAGE 6: MOMENTS (PHOTOS) ---------- */
+      function st6(box) {
+        var P = CFG.photos.slice(0, 10),
+          n = P.length,
+          c = 0,
+          seen = { 0: 1 },
+          cnt = 1;
+
+        box.innerHTML =
+          '<h2>Celebration Cards</h2>' +
+          '<p class="sub">(Swipe or tap the cards)</p>' +
+          '<div class="stackbox" id="pw">' +
+          P.map(function (p) {
+            return '<div class="pol"><div class="ph"><img src="' + esc(p.src) + '" alt="" draggable="false"></div><div class="cap">' + esc(p.caption || '') + '</div></div>';
+          }).join('') +
+          '</div>' +
+          '<div class="pill" id="pc">1 / ' + n + '</div>' +
+          '<div class="slot"><button class="btn reveal" id="nx">Continue →</button></div>';
+
+        var cards = box.querySelectorAll('.pol'),
+          pw = $('#pw', box),
+          nx = $('#nx', box);
+
+        function rot(i) {
+          return i % 2 ? 2 + (i % 3) : -(2 + (i % 3));
+        }
+        function lay() {
+          Array.prototype.forEach.call(cards, function (el, i) {
+            var pos = (i - c + n) % n;
+            el.style.zIndex = n - pos;
+            el.style.opacity = pos > 3 ? 0 : 1;
+            el.style.transform = 'translateY(' + pos * 7 + 'px) rotate(' + (pos === 0 ? 0 : rot(i)) + 'deg) scale(' + (1 - pos * 0.045) + ')';
+          });
+          $('#pc', box).textContent = c + 1 + ' / ' + n;
+        }
+        function fly(dir) {
+          S.swipe();
+          var el = cards[c];
+          el.style.transition = 'transform .4s ease,opacity .35s';
+          el.style.transform = 'translate(' + dir * 360 + 'px,-30px) rotate(' + dir * 24 + 'deg)';
+          el.style.opacity = 0;
+          T(function () {
+            el.style.transition = 'none';
+            c = (c + 1) % n;
+            if (!seen[c]) {
+              seen[c] = 1;
+              cnt++;
+            }
+            lay();
+            void el.offsetWidth;
+            el.style.transition = '';
+            if (cnt >= Math.min(n, 4)) nx.classList.add('on');
+          }, 360);
+        }
+
+        lay();
+        if (n === 1) nx.classList.add('on');
+
+        var sx = null,
+          sy = 0,
+          dx = 0,
+          drag = false;
+        pw.addEventListener('pointerdown', function (e) {
+          if (n < 2) return;
+          sx = e.clientX;
+          sy = e.clientY;
+          dx = 0;
+          drag = true;
+          try {
+            pw.setPointerCapture(e.pointerId);
+          } catch (x) {}
+          cards[c].style.transition = 'none';
+        });
+        pw.addEventListener('pointermove', function (e) {
+          if (!drag) return;
+          dx = e.clientX - sx;
+          cards[c].style.transform = 'translate(' + dx + 'px,' + (e.clientY - sy) * 0.2 + 'px) rotate(' + dx * 0.06 + 'deg)';
+        });
+        function end() {
+          if (!drag) return;
+          drag = false;
+          cards[c].style.transition = '';
+          if (Math.abs(dx) > 50) fly(dx < 0 ? -1 : 1);
+          else if (Math.abs(dx) < 10) fly(1);
+          else lay();
+        }
+        pw.addEventListener('pointerup', end);
+        pw.addEventListener('pointercancel', function () {
+          if (drag) {
+            drag = false;
+            cards[c].style.transition = '';
+            lay();
+          }
+        });
+        nx.onclick = next;
+      }
+
+      /* ---------- STAGE 7: WHY YOU'RE THE BEST VAINI ---------- */
+      function st7(box) {
+        var R = CFG.reasons,
+          open = 0;
+        box.innerHTML =
+          "<h2>Why You're the Best Vaini</h2>" +
+          '<p class="sub" id="cnt">Tap each badge to reveal · 0 / 5</p>' +
+          '<div class="list">' +
+          R.map(function (r, i) {
+            return (
+              '<button class="item" data-i="' +
+              i +
+              '"><span class="ic">★</span><span class="tx"><span class="off">Tap to reveal fact #' +
+              (i + 1) +
+              '</span><span class="on">' +
+              esc(r) +
+              '</span></span></button>'
+            );
+          }).join('') +
+          '</div>' +
+          '<div class="slot"><button class="btn reveal" id="nx">Continue →</button></div>';
+
+        Array.prototype.forEach.call(box.querySelectorAll('.item'), function (b) {
+          b.onclick = function () {
+            if (b.classList.contains('open')) return;
+            b.classList.add('open');
+            b.querySelector('.ic').textContent = '✨';
+            S.reveal();
+            open++;
+            $('#cnt', box).textContent = open < 5 ? 'Tap each badge to reveal · ' + open + ' / 5' : '100% verified facts 🙌';
+            if (open === 5) {
+              T(function () {
+                $('#nx', box).classList.add('on');
+              }, 500);
+            }
+          };
+        });
+        $('#nx', box).onclick = next;
+      }
+
+      /* ---------- STAGE 8: WAX-SEALED 3D FLIP VAINI VIP VOUCHERS ---------- */
+      function st8(box) {
+        var P = CFG.promises,
+          open = 0;
+        box.innerHTML =
+          '<h2>Vaini VIP Vouchers ✨</h2>' +
+          '<p class="sub" id="cnt">Tap each wax seal to claim · 0 / 3</p>' +
+          '<div class="promise-grid">' +
+          P.map(function (r, i) {
+            return (
+              '<div class="pcard" data-i="' + i + '" role="button" tabindex="0">' +
+              '<div class="pface pfront"><span class="wax">★</span><span class="ptx">VIP Voucher #' + (i + 1) + ' · Tap to break seal ✨</span></div>' +
+              '<div class="pface pback"><span class="wax">🎟️</span><span class="ptx">' + esc(r) + '</span></div>' +
+              '</div>'
+            );
+          }).join('') +
+          '</div>' +
+          '<div class="slot"><button class="btn reveal" id="nx">Continue →</button></div>';
+
+        Array.prototype.forEach.call(box.querySelectorAll('.pcard'), function (card) {
+          function flipCard() {
+            if (card.classList.contains('flipped')) return;
+            card.classList.add('flipped');
+            S.env();
+            open++;
+            $('#cnt', box).textContent = open < 3 ? 'Tap each wax seal to claim · ' + open + ' / 3' : 'Valid forever, no expiry 🙌';
+            if (open === 3) {
+              T(function () {
+                $('#nx', box).classList.add('on');
+              }, 520);
+            }
+          }
+          card.onclick = flipCard;
+          card.onkeydown = function (e) {
+            if (e.key === 'Enter' || e.key === ' ') {
+              e.preventDefault();
+              flipCard();
+            }
+          };
+        });
+        $('#nx', box).onclick = next;
+      }
+
+      /* ---------- STAGE 9: "THE VAINI TIMES" SPECIAL BIRTHDAY EDITION (DIFFERENT FROM ENVELOPE LETTER!) ---------- */
+      function st9(box) {
+        box.innerHTML =
+          '<h2>Special Birthday Edition 📰</h2>' +
+          '<div class="scroll-box">' +
+          '<div class="news-hdr">' +
+          '<div class="news-tag">✦ Exclusive Family Front-Page News ✦</div>' +
+          '<div class="news-title">THE VAINI TIMES</div>' +
+          '<div class="news-meta"><span>ISSUE #01 · BIRTHDAY SPECIAL</span><span>PRICE: 1 SLICE OF CAKE</span></div>' +
+          '</div>' +
+          '<div class="news-body" id="txt"></div>' +
+          '</div>' +
+          '<div class="slot"><button class="btn reveal" id="nx">Continue →</button></div>';
+
+        var full = 'Dear ' + NM() + ',\n\n' + CFG.letterBody.replace(/\{name\}/g, NM()),
+          idx = 0,
+          txt = $('#txt', box),
+          nx = $('#nx', box);
+
+        function finish() {
+          clearInterval(timer);
+          idx = full.length;
+          txt.innerHTML = esc(full) + '\n<span class="news-stamp">✓ OFFICIALLY APPROVED BY DEVAR</span>';
+          nx.classList.add('on');
+        }
+
+        var timer = I(function () {
+          if (idx < full.length) {
+            var ch = full.charAt(idx);
+            txt.textContent = full.slice(0, idx + 1);
+            if (idx % 3 === 0 && ch.trim()) S.tick();
+            idx++;
+            txt.scrollTop = txt.scrollHeight;
+          } else {
+            finish();
+          }
+        }, 26);
+
+        txt.onclick = function () {
+          if (idx < full.length) finish();
+        };
+        nx.onclick = function () {
+          clearInterval(timer);
+          next();
+        };
+      }
+
+      /* ---------- STAGE 10: CLEAN GIFT FINALE (NO BEAR/RABBIT/SECRET) ---------- */
+      function st10(box) {
+        box.innerHTML =
+          '<h2>One Last Thing...</h2>' +
+          '<p class="sub">Tap the gift box to open</p>' +
+          '<svg class="gift" id="gift" viewBox="0 0 220 220">' +
+          '<defs>' +
+          '<linearGradient id="gBoxL" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#f65588"/><stop offset="1" stop-color="#c41950"/></linearGradient>' +
+          '<linearGradient id="gBoxR" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#d82760"/><stop offset="1" stop-color="#9e113e"/></linearGradient>' +
+          '<linearGradient id="gLid" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ff7aa4"/><stop offset="1" stop-color="#d6245d"/></linearGradient>' +
+          '<linearGradient id="gGold" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#fff0b3"/><stop offset=".45" stop-color="#f5c453"/><stop offset="1" stop-color="#c98e1e"/></linearGradient>' +
+          '<linearGradient id="gGoldDark" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#e5b03e"/><stop offset="1" stop-color="#a87212"/></linearGradient>' +
+          '</defs>' +
+          '<ellipse cx="110" cy="198" rx="74" ry="11" fill="#b82555" opacity=".2"/>' +
+          '<rect x="38" y="96" width="144" height="98" rx="12" fill="url(#gBoxL)" stroke="#a31341" stroke-width="1.5"/>' +
+          '<path d="M110 96 L170 96 Q182 96 182 108 L182 182 Q182 194 170 194 L110 194 Z" fill="url(#gBoxR)" opacity=".45"/>' +
+          '<rect x="96" y="96" width="28" height="98" fill="url(#gGold)"/>' +
+          '<line x1="100" y1="96" x2="100" y2="194" stroke="#fff7d6" stroke-width="1.2" opacity=".75"/>' +
+          '<line x1="120" y1="96" x2="120" y2="194" stroke="#9e6a10" stroke-width="1.2" opacity=".55"/>' +
+          '<g class="glid">' +
+          '<rect x="28" y="68" width="164" height="32" rx="10" fill="url(#gLid)" stroke="#a31341" stroke-width="1.5"/>' +
+          '<rect x="29" y="94" width="162" height="5" fill="#7d0d31" opacity=".28"/>' +
+          '<rect x="94" y="68" width="32" height="32" fill="url(#gGold)"/>' +
+          '<path d="M108 68 C78 24, 34 32, 48 56 C58 72, 92 68, 108 68 Z" fill="url(#gGold)" stroke="#b87e18" stroke-width="1.5"/>' +
+          '<path d="M104 66 C82 40, 56 44, 62 56 C67 65, 90 66, 104 66 Z" fill="url(#gGoldDark)" opacity=".65"/>' +
+          '<path d="M112 68 C142 24, 186 32, 172 56 C162 72, 128 68, 112 68 Z" fill="url(#gGold)" stroke="#b87e18" stroke-width="1.5"/>' +
+          '<path d="M116 66 C138 40, 164 44, 158 56 C153 65, 130 66, 116 66 Z" fill="url(#gGoldDark)" opacity=".65"/>' +
+          '<rect x="98" y="54" width="24" height="18" rx="7" fill="url(#gGold)" stroke="#b87e18" stroke-width="1.5"/>' +
+          '</g>' +
+          '<path class="tw" d="M24 38 l3 8 8 3 -8 3 -3 8 -3 -8 -8 -3 8 -3z" fill="#ffd54f"/>' +
+          '<path class="tw" style="animation-delay:-1s" d="M196 30 l3 8 8 3 -8 3 -3 8 -3 -8 -8 -3 8 -3z" fill="#ffd54f"/>' +
+          '<circle class="tw" cx="22" cy="134" r="3.5" fill="#ff8fb3"/><circle class="tw" style="animation-delay:-.7s" cx="198" cy="142" r="3.5" fill="#ffd54f"/>' +
+          '</svg>';
+
+        var openedGift = false;
+        $('#gift', box).onclick = function () {
+          if (openedGift) return;
+          openedGift = true;
+          this.classList.add('opening');
+          S.fin();
+          confetti();
+          T(function () {
+            box.innerHTML =
+              '<div class="final">' +
+              '<div style="font-size:52px;line-height:1">👑🎂🥂</div>' +
+              '<p class="big">Happy Birthday, ' + esc(NM()) + '!</p>' +
+              '<p class="sub">Wishing you a year packed with happiness, success, and zero stress from Dada! Hope this little surprise made you smile.</p>' +
+              '<div class="devar-badge">✨ Best wishes from your Favorite Devar 🙌</div>' +
+              '</div>' +
+              '<div class="slot"><button class="btn" id="rp">↻ Replay</button></div>';
+
+            $('#rp', box).onclick = function () {
+              S.tap();
+              go(0);
+            };
+          }, 420);
+        };
+      }
+
+      var STAGES = [st1, st2, st3, st4, st5, st6, st7, st8, st9, st10];
+
+      /* ---------- CONFETTI ---------- */
+      function confetti() {
+        var cv = $('#conf'),
+          x = cv.getContext('2d'),
+          dpr = window.devicePixelRatio || 1,
+          W = cv.clientWidth,
+          H = cv.clientHeight;
+        cv.width = W * dpr;
+        cv.height = H * dpr;
+        x.setTransform(dpr, 0, 0, dpr, 0, 0);
+        var cols = ['#f06292', '#ffd27a', '#9ed9e8', '#c3a6f0', '#a8e3c1', '#d1235c', '#fff', '#ffb199'],
+          ps = [];
+        function burst(ox, oy, n, sp) {
+          for (var i = 0; i < n; i++) {
+            var a = Math.random() * Math.PI * 2,
+              s = (0.35 + Math.random() * 0.65) * sp;
+            ps.push({
+              x: ox,
+              y: oy,
+              vx: Math.cos(a) * s,
+              vy: Math.sin(a) * s - 6,
+              c: cols[i % cols.length],
+              w: 6 + Math.random() * 7,
+              h: 4 + Math.random() * 6,
+              r: Math.random() * 6,
+              vr: Math.random() * 0.4 - 0.2,
+              star: Math.random() < 0.25
+            });
+          }
+        }
+        burst(W / 2, H * 0.5, 150, 14);
+        setTimeout(function () {
+          burst(W * 0.15, H * 0.9, 50, 15);
+          burst(W * 0.85, H * 0.9, 50, 15);
+        }, 350);
+
+        var f = 0;
+        (function d() {
+          x.clearRect(0, 0, W, H);
+          ps.forEach(function (p) {
+            p.vy += 0.26;
+            p.vx *= 0.992;
+            p.vy *= 0.995;
+            p.x += p.vx;
+            p.y += p.vy;
+            p.r += p.vr;
+            x.save();
+            x.translate(p.x, p.y);
+            x.rotate(p.r);
+            x.fillStyle = p.c;
+            if (p.star) {
+              x.font = '16px serif';
+              x.fillText('✦', -6, 6);
+            } else {
+              x.fillRect(-p.w / 2, -p.h / 2, p.w, p.h);
+            }
+            x.restore();
+          });
+          if (++f < 300) requestAnimationFrame(d);
+          else x.clearRect(0, 0, W, H);
+        })();
+      }
+
+      /* ---------- STEALTH TRIPLE-CLICK ADMIN & EXPORTER ---------- */
+      var clicks = [],
+        draft;
+      $('#adminHeart').onclick = function () {
+        var n = Date.now();
+        clicks = clicks.filter(function (t) {
+          return n - t < 1200;
+        });
+        clicks.push(n);
+        if (clicks.length >= 3) {
+          clicks = [];
+          skipBtn.classList.remove('on');
+          draft = JSON.parse(JSON.stringify(CFG));
+          draw();
+          $('#modal').classList.add('on');
+        }
+      };
+
+      function inp(id, v, phText) {
+        return '<input type="text" id="' + id + '" value="' + esc(v) + '" placeholder="' + esc(phText || '') + '">';
+      }
+
+      function draw(msg) {
+        var m = $('#modal');
+        m.innerHTML =
+          '<div class="mbox"><div class="mhead">Customize Vaini\'s Surprise</div><div class="mbody">' +
+          '<label>Recipient Name</label>' +
+          inp('a_name', draft.name, 'Neha Vaini') +
+          '<label>Welcome Question</label>' +
+          inp('a_q', draft.welcomeSubtitle) +
+          '<label>4 Balloon Words</label><div class="g2">' +
+          draft.balloonWords
+            .map(function (w, i) {
+              return inp('a_b' + i, w);
+            })
+            .join('') +
+          '</div>' +
+          "<label>5 Reasons You're the Best Vaini</label><div class=\"g1\">" +
+          draft.reasons
+            .map(function (w, i) {
+              return inp('a_r' + i, w);
+            })
+            .join('') +
+          '</div>' +
+          '<label>3 VIP Vouchers (Wax-Sealed Cards)</label><div class="g1">' +
+          draft.promises
+            .map(function (w, i) {
+              return inp('a_c' + i, w);
+            })
+            .join('') +
+          '</div>' +
+          '<label>Vaini Times Article (after "Dear NAME,")</label><textarea id="a_l">' +
+          esc(draft.letterBody) +
+          '</textarea>' +
+          '<label>Photos (' +
+          draft.photos.length +
+          ' / 10)</label><div id="a_p">' +
+          draft.photos
+            .map(function (p, i) {
+              return (
+                '<div class="pitem"><img src="' +
+                esc(p.src) +
+                '" alt=""><input type="text" class="a_cap" data-i="' +
+                i +
+                '" placeholder="Caption" value="' +
+                esc(p.caption) +
+                '"><button data-u="' +
+                i +
+                '">↑</button><button data-d="' +
+                i +
+                '">↓</button><button data-x="' +
+                i +
+                '">✕</button></div>'
+              );
+            })
+            .join('') +
+          '</div><div style="margin-top:10px"><input type="file" id="a_f" accept="image/*" multiple></div></div>' +
+          '<div id="a_msg">' + esc(msg || 'Photos are compressed automatically.') + '</div>' +
+          '<div class="mfoot"><button class="btn" id="a_s">Save &amp; Preview</button><button class="btn ghost" id="a_r">Reset Default</button><button class="btn ghost" id="a_d">⬇ Download index.html</button><button class="btn ghost" id="a_x">Close</button></div></div>';
+
+        $('#a_f').onchange = function (e) {
+          sync();
+          var files = Array.prototype.slice.call(e.target.files),
+            room = 10 - draft.photos.length,
+            left = Math.min(files.length, Math.max(room, 0));
+          if (!left) {
+            draw('Photo limit reached (10).');
+            return;
+          }
+          files.slice(0, left).forEach(function (f) {
+            var r = new FileReader();
+            r.onload = function () {
+              var im = new Image();
+              im.onload = function () {
+                var M = 900,
+                  k = Math.min(1, M / Math.max(im.width, im.height)),
+                  cv = document.createElement('canvas');
+                cv.width = Math.round(im.width * k);
+                cv.height = Math.round(im.height * k);
+                cv.getContext('2d').drawImage(im, 0, 0, cv.width, cv.height);
+                draft.photos.push({ src: cv.toDataURL('image/jpeg', 0.78), caption: '' });
+                sync();
+                draw();
+              };
+              im.src = r.result;
+            };
+            r.readAsDataURL(f);
+          });
+        };
+
+        Array.prototype.forEach.call(m.querySelectorAll('[data-u]'), function (b) {
+          b.onclick = function () {
+            sync();
+            var i = +b.dataset.u;
+            if (i > 0) {
+              var t = draft.photos[i];
+              draft.photos[i] = draft.photos[i - 1];
+              draft.photos[i - 1] = t;
+            }
+            draw();
+          };
+        });
+        Array.prototype.forEach.call(m.querySelectorAll('[data-d]'), function (b) {
+          b.onclick = function () {
+            sync();
+            var i = +b.dataset.d;
+            if (i < draft.photos.length - 1) {
+              var t = draft.photos[i];
+              draft.photos[i] = draft.photos[i + 1];
+              draft.photos[i + 1] = t;
+            }
+            draw();
+          };
+        });
+        Array.prototype.forEach.call(m.querySelectorAll('[data-x]'), function (b) {
+          b.onclick = function () {
+            sync();
+            if (draft.photos.length > 1) {
+              draft.photos.splice(+b.dataset.x, 1);
+              draw();
+            } else {
+              draw('Keep at least one photo.');
+            }
+          };
+        });
+
+        $('#a_x').onclick = function () {
+          m.classList.remove('on');
+        };
+        $('#a_s').onclick = function () {
+          sync();
+          draft._t = Date.now();
+          CFG = norm(draft);
+          try {
+            localStorage.setItem(KEY, JSON.stringify(CFG));
+          } catch (e) {}
+          m.classList.remove('on');
+          busy = false;
+          cur = -1;
+          go(0);
+        };
+        $('#a_r').onclick = function () {
+          try {
+            localStorage.removeItem(KEY);
+          } catch (e) {}
+          draft = JSON.parse(JSON.stringify(DEFAULT));
+          draw('Reset to default (not saved yet).');
+        };
+        $('#a_d').onclick = function () {
+          sync();
+          draft._t = Date.now();
+          exportHtml(norm(draft));
+        };
+      }
+
+      function sync() {
+        if (!$('#a_name')) return;
+        draft.name = $('#a_name').value.trim() || 'Neha Vaini';
+        draft.welcomeSubtitle = $('#a_q').value.trim() || DEFAULT.welcomeSubtitle;
+        for (var i = 0; i < 4; i++) draft.balloonWords[i] = $('#a_b' + i).value.trim() || DEFAULT.balloonWords[i];
+        for (var j = 0; j < 5; j++) draft.reasons[j] = $('#a_r' + j).value.trim() || DEFAULT.reasons[j];
+        for (var k = 0; k < 3; k++) draft.promises[k] = $('#a_c' + k).value.trim() || DEFAULT.promises[k];
+        draft.letterBody = $('#a_l').value.trim() || DEFAULT.letterBody;
+        Array.prototype.forEach.call(document.querySelectorAll('.a_cap'), function (e) {
+          if (draft.photos[+e.dataset.i]) draft.photos[+e.dataset.i].caption = e.value;
+        });
+      }
+
+      function exportHtml(cfg) {
+        var el = document.documentElement.cloneNode(true);
+        var r = el.querySelector('#root');
+        r.innerHTML = '';
+        r.removeAttribute('style');
+        [].forEach.call(el.querySelectorAll('html,body'), function (e) {
+          e.removeAttribute('style');
+        });
+        el.removeAttribute('style');
+        var safeJson = JSON.stringify(cfg)
+          .replace(/</g, '\\u003c')
+          .replace(/>/g, '\\u003e')
+          .replace(/&/g, '\\u0026')
+          .replace(/\u2028/g, '\\u2028')
+          .replace(/\u2029/g, '\\u2029');
+        el.querySelector('#cfg').textContent = 'window.BAKED=' + safeJson + ';';
+        var html = '<!DOCTYPE html>\n' + el.outerHTML;
+        var a = document.createElement('a');
+        a.href = URL.createObjectURL(new Blob([html], { type: 'text/html;charset=utf-8' }));
+        a.download = 'index.html';
+        document.body.appendChild(a);
+        a.click();
+        setTimeout(function () {
+          URL.revokeObjectURL(a.href);
+          a.remove();
+        }, 800);
+        var m = $('#a_msg');
+        if (m) m.textContent = 'Downloaded index.html with all your edits and photos baked in.';
+      }
+
+      go(0);
+    })();
+  </script>
+</body>
+</html>
